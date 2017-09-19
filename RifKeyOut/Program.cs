@@ -21,8 +21,6 @@ namespace RifKeyOut
                     {
                         Console.WriteLine("only rif files and work.bin are supported!");
                     }
-
-
                 }
 
             }
