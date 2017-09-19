@@ -9,10 +9,8 @@ namespace RifKeyOut
             IdParser parse = new IdParser();
             if (args.Length != 0)
             {
-                for (int i = 0; i < args.Length; i++)
+                foreach (string path in args)
                 {
-                    
-                    String path = args[i];
                     if (HasRifExtension(path))
                     {
                         parse.Parse(path);
@@ -20,15 +18,17 @@ namespace RifKeyOut
                     else
                     {
                         Console.WriteLine("only rif files and work.bin are supported!");
+                        Console.Read();
+                        Environment.Exit(1);
                     }
                 }
-
             }
             Console.WriteLine("Usage:");
             Console.WriteLine("Drag rif files onto executable, output is in same location as the executable! ");
             Console.Write("Press Enter to close window ...");
             Console.Read();
         }
+
         public static bool HasRifExtension(string source)
         {
             return (source.EndsWith(".rif") || source.EndsWith(".bin"));
