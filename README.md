@@ -1,7 +1,7 @@
 # RifKeyOut
 
 
-RifKeyOut is extracts the rif key so that it can be shared with other people!
+RifKeyOut extracts the rif key so that it can be shared with other people!
 
 ### Usage
 
