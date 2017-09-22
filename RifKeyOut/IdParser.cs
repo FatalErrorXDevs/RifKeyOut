@@ -30,7 +30,11 @@ namespace RifKeyOut
                     Console.WriteLine("Title key : \t" + titleKey); //reader.ReadBytes(16)
                     File.WriteAllText(outPutFile, titleKey);
                 }
-                Console.WriteLine("this is not a valid NoNPDRM rif or work bin!");
+                else
+                {
+                    Console.WriteLine("this is not a valid NoNPDRM rif or work bin!");
+                }
+                Console.WriteLine("Extraction successful");
             }
             catch (Exception e)
             {
